@@ -182,8 +182,9 @@ function card(f){const s=stOf(f.id),l=last(f.id),wk=LOG.filter(r=>r.flow===f.id&
  <div class="side"><div><span class="lab">Giai đoạn</span><br>Ngày ${f.phase===30?"1–30":f.phase===60?"31–60":"61–90"}</div><div><span class="lab">Lần chạy cuối</span><br>${state==="ok"?(l?fmt(l):"Chưa có log"):"—"}</div>
  <div><span class="lab">Make</span><br>${f.scenario?`<a href="${MAKE_NEW+f.scenario}/edit" target="_blank" rel="noopener">Scenario #${f.scenario}</a>`:"Chưa có scenario"}</div>
  <div><span class="lab">Dòng log luồng ghi về</span><br><code style="font:12px var(--m);color:var(--muted)">thời gian · ${f.id} · ok · số lượng · ${esc(f.unit)} · link · ghi chú</code></div></div></div></details>`}
+function csv(t){const rows=[];let row=[],f="",q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++}else q=false}else f+=c}else if(c==='"')q=true;else if(c===","){row.push(f);f=""}else if(c==="\n"){row.push(f);rows.push(row);row=[];f=""}else if(c!=="\r")f+=c}if(f||row.length){row.push(f);rows.push(row)}return rows}
 async function load(){state="wait";render();
- try{const r=await fetch(LOG_URL,{cache:"no-store"});if(!r.ok)throw new Error("HTTP "+r.status);const j=await r.json();const v=Array.isArray(j)?j:(j.values||[]);
+ try{const r=await fetch(LOG_URL,{cache:"no-store"});if(!r.ok)throw new Error("HTTP "+r.status);const t=await r.text();let v;if(/output=csv/.test(LOG_URL)||!/^\s*[\[{]/.test(t)){v=csv(t)}else{const j=JSON.parse(t);v=Array.isArray(j)?j:(j.values||[])}
   LOG=v.filter(x=>x&&x[1]&&String(x[1]).trim().toUpperCase()!=="MA_LUONG").map(x=>({time:pt(x[0]),flow:String(x[1]).trim().toUpperCase(),status:String(x[2]||"ok").toLowerCase(),qty:parseFloat(String(x[3]||0).replace(",","."))||0,unit:String(x[4]||"").toLowerCase(),link:/^https?:\/\//.test(x[5]||"")?x[5]:"",note:x[6]||""}));state="ok";at=new Date()}
  catch(e){state="err";msg="Chưa đọc được AAS Hub ("+e.message+"). Kiểm tra workflow n8n aas-log."}render()}
 $("rl").onclick=load;render();load();setInterval(load,120000);
