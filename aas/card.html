@@ -25,7 +25,17 @@ h1{font-size:var(--fs,72px)!important;max-width:540px!important}
 p{font-size:32px!important;max-width:450px!important}
 .foot{position:relative;z-index:2;background:linear-gradient(transparent,#07130e 30%);margin-left:-90px;margin-right:-90px;padding-left:90px;padding-right:90px;padding-bottom:0}
 .wrap{z-index:1}
+
+body.bds{background:radial-gradient(circle at 78% 30%,#1f3a5f 0%,#0f1f36 42%,#070e1a 100%)}
+body.bds .grid{background-image:linear-gradient(rgba(233,196,106,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(233,196,106,.05) 1px,transparent 1px)}
+body.bds .tag{background:#e9c46a;color:#1a1305}
+body.bds .brand i{background:#e9c46a;box-shadow:0 0 18px #e9c46a}
+body.bds h1 em{color:#f2d28b}
+body.bds .ring,body.bds .ring:after{border-color:rgba(233,196,106,.3)}
+body.bds .halo{background:radial-gradient(circle,rgba(233,196,106,.22),rgba(233,196,106,0) 62%)}
+body.bds .num{color:rgba(233,196,106,.13)}
+body.bds p{color:#c9d3e3}
 </style></head><body><div class="grid"></div><div class="halo"></div><div class="ring"></div><img class="me" src="poses/luan-01.png"><div class="num" id="num"></div>
-<div class="wrap"><div class="brand"><i></i>LUÂN AI</div><div class="tag" id="tag"></div><h1 id="h"></h1><p id="p"></p>
-<div class="foot"><div><b>Người Trong Cuộc</b>Nói Thật · Dạy Thật · Làm Thật</div><div class="cta">Inbox chữ AI</div></div></div>
-<script>const q=new URLSearchParams(location.search.slice(1));document.getElementById('tag').textContent=q.get('t');document.getElementById('h').innerHTML=q.get('h');document.getElementById('p').textContent=q.get('p');document.getElementById('num').textContent=q.get('n')||'';if(q.get('pose')){const m=document.querySelector('.me');m.onerror=()=>{m.onerror=null;m.src="poses/luan-01.png"};m.onload=()=>{if(m.naturalWidth/m.naturalHeight<0.95){m.style.right='-30px';m.style.objectPosition='right bottom'}};m.src='poses/luan-'+q.get('pose')+'.png'}if(q.get('fs'))document.body.style.setProperty('--fs',q.get('fs'))</script></body></html>
+<div class="wrap"><div class="brand"><i></i><span id="brand">LUÂN AI</span></div><div class="tag" id="tag"></div><h1 id="h"></h1><p id="p"></p>
+<div class="foot"><div><b id="sig">Người Trong Cuộc</b><span id="sig2">Nói Thật · Dạy Thật · Làm Thật</span></div><div class="cta" id="cta">Inbox chữ AI</div></div></div>
+<script>const q=new URLSearchParams(location.search.slice(1));document.getElementById('tag').textContent=q.get('t');document.getElementById('h').innerHTML=q.get('h');document.getElementById('p').textContent=q.get('p');document.getElementById('num').textContent=q.get('n')||'';if(q.get('pose')){const m=document.querySelector('.me');m.onerror=()=>{m.onerror=null;m.src="poses/luan-01.png"};m.onload=()=>{if(m.naturalWidth/m.naturalHeight<0.95){m.style.right='-30px';m.style.objectPosition='right bottom'}};m.src='poses/luan-'+q.get('pose')+'.png'}const T=(k,id)=>{if(q.get(k))document.getElementById(id).textContent=q.get(k)};T('brand','brand');T('sig','sig');T('sig2','sig2');T('cta','cta');if(q.get('theme'))document.body.classList.add(q.get('theme'));if(q.get('fs'))document.body.style.setProperty('--fs',q.get('fs'))</script></body></html>
