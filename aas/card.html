@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><style>
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:Inter;src:url(fonts/Inter-Regular.otf);font-weight:400}@font-face{font-family:Inter;src:url(fonts/Inter-Medium.otf);font-weight:500}@font-face{font-family:Inter;src:url(fonts/Inter-SemiBold.otf);font-weight:600}@font-face{font-family:Inter;src:url(fonts/Inter-Bold.otf);font-weight:700}@font-face{font-family:Inter;src:url(fonts/Inter-ExtraBold.otf);font-weight:800}@font-face{font-family:Inter;src:url(fonts/Inter-Black.otf);font-weight:900}
 *{margin:0;box-sizing:border-box}
 body{width:1080px;height:1350px;font-family:Inter,"DejaVu Sans",sans-serif;color:#eef5f0;overflow:hidden;
 background:radial-gradient(circle at 78% 30%,#174a36 0%,#0c2219 42%,#07130e 100%)}
@@ -25,7 +25,7 @@ h1{font-size:var(--fs,72px)!important;max-width:540px!important}
 p{font-size:32px!important;max-width:450px!important}
 .foot{position:relative;z-index:2;background:linear-gradient(transparent,#07130e 30%);margin-left:-90px;margin-right:-90px;padding-left:90px;padding-right:90px;padding-bottom:0}
 .wrap{z-index:1}
-</style></head><body><div class="grid"></div><div class="halo"></div><div class="ring"></div><img class="me" src="luan.png"><div class="num" id="num"></div>
+</style></head><body><div class="grid"></div><div class="halo"></div><div class="ring"></div><img class="me" src="poses/luan-01.png"><div class="num" id="num"></div>
 <div class="wrap"><div class="brand"><i></i>LUÂN AI</div><div class="tag" id="tag"></div><h1 id="h"></h1><p id="p"></p>
 <div class="foot"><div><b>Người Trong Cuộc</b>Nói Thật · Dạy Thật · Làm Thật</div><div class="cta">Inbox chữ AI</div></div></div>
-<script>const q=new URLSearchParams(location.search.slice(1));document.getElementById('tag').textContent=q.get('t');document.getElementById('h').innerHTML=q.get('h');document.getElementById('p').textContent=q.get('p');document.getElementById('num').textContent=q.get('n')||'';if(q.get('pose')){const m=document.querySelector('.me');m.onerror=()=>{m.onerror=null;m.src='luan.png'};m.onload=()=>{if(m.naturalWidth/m.naturalHeight<0.95){m.style.right='-30px';m.style.objectPosition='right bottom'}};m.src='poses/luan-'+q.get('pose')+'.png'}if(q.get('fs'))document.body.style.setProperty('--fs',q.get('fs'))</script></body></html>
+<script>const q=new URLSearchParams(location.search.slice(1));document.getElementById('tag').textContent=q.get('t');document.getElementById('h').innerHTML=q.get('h');document.getElementById('p').textContent=q.get('p');document.getElementById('num').textContent=q.get('n')||'';if(q.get('pose')){const m=document.querySelector('.me');m.onerror=()=>{m.onerror=null;m.src="poses/luan-01.png"};m.onload=()=>{if(m.naturalWidth/m.naturalHeight<0.95){m.style.right='-30px';m.style.objectPosition='right bottom'}};m.src='poses/luan-'+q.get('pose')+'.png'}if(q.get('fs'))document.body.style.setProperty('--fs',q.get('fs'))</script></body></html>
