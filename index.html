@@ -1,1 +1,390 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#102d37"><link rel="manifest" href="manifest.webmanifest"><title>Metta Eye</title><style>@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;600;700;800&display=swap');:root{--n:#102d37;--s:#145866;--i:#f5f1e7;--ink:#14292c;--c:#d86652;--l:#cad8d0}*{box-sizing:border-box}body{margin:0;background:#e5e8df;color:var(--ink);font:14px Manrope,sans-serif}.app{max-width:560px;min-height:100dvh;margin:auto;background:var(--i);padding-bottom:84px}.hero{padding:calc(env(safe-area-inset-top) + 26px) 23px 34px;background:radial-gradient(circle at 91% 15%,#2c7881 0,transparent 35%),var(--n);color:#fff}.brand,.tag{font:10px DM Mono;letter-spacing:.12em;text-transform:uppercase}.brand{color:#b7d3cb}.hero h1{margin:9px 0 3px;font:700 41px/.93 Fraunces,serif;letter-spacing:-.045em}.hero p{margin:13px 0 0;color:#c6d9d4;font-size:13px}.content{padding:20px 17px}.rule{border-left:4px solid #f5c466;background:#fff7dc;padding:12px 14px;font-size:12px;line-height:1.5}.rule b{display:block;font:500 10px DM Mono;letter-spacing:.09em}.tabs{display:flex;gap:6px;margin:21px 0 15px}.tabs button,.nav button{border:0;background:none;font:700 11px Manrope;color:#58736f}.tabs button{border:1px solid var(--l);border-radius:99px;padding:7px 10px}.tabs .active{color:#fff;background:var(--s);border-color:var(--s)}.view{display:none}.view.active{display:block}.title{display:flex;justify-content:space-between;align-items:baseline;margin:0 2px 12px}.title h2{margin:0;font:700 24px Fraunces,serif}.title span{font:10px DM Mono;color:#58736f}.card{background:#fffdf8;border:1px solid var(--l);border-radius:12px;padding:15px;margin:9px 0}.card h3{margin:3px 0;font-size:16px}.card p{margin:0;color:#58706c;font-size:12px;line-height:1.5}.tag{color:#367068}.pill{display:inline-block;margin-top:10px;padding:4px 8px;border-radius:20px;background:#fff0ce;color:#765300;font:10px DM Mono}.new{width:100%;padding:13px;border-radius:9px;border:0;background:var(--c);color:#fff;font:800 13px Manrope;margin-top:8px}.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(560px,100%);padding:11px 14px calc(11px + env(safe-area-inset-bottom));background:#fffdf8ee;display:flex;justify-content:space-around;border-top:1px solid var(--l)}.nav .active{color:var(--s)}dialog{border:0;border-radius:14px;width:min(520px,calc(100% - 28px));padding:21px;box-shadow:0 22px 50px #102d3766}dialog::backdrop{background:#102d3788}dialog h2{font:700 27px Fraunces;margin:0}dialog p{font-size:12px;color:#5c706d}label{display:block;font:10px DM Mono;text-transform:uppercase;letter-spacing:.07em;margin-top:13px}input,select,textarea{font:14px Manrope;width:100%;margin-top:5px;padding:10px;border:1px solid var(--l);border-radius:7px;background:#fffdf8}textarea{height:68px}button{cursor:pointer}.actions{display:flex;gap:8px;margin-top:17px}.actions button{border:0;padding:10px 13px;border-radius:7px;font:700 12px Manrope}.go{background:var(--s);color:#fff}.no{background:#e5ebe4}@media(min-width:620px){body{padding:20px}.app{min-height:calc(100dvh - 40px);border-radius:20px;overflow:hidden}.nav{bottom:20px;border-radius:0 0 20px 20px}}</style></head><body><main class="app"><header class="hero"><div class="brand">Metta Eye · Compassionate Intelligence</div><h1>Kết nối<br>để chăm sóc.</h1><p>Điều phối nguồn lực được phép, minh bạch và do con người chịu trách nhiệm.</p></header><section class="content"><div class="rule"><b>QUY TẮC GỐC</b>Không có kết nối “vạn vật”. Mỗi nguồn phải có mục đích, quyền dùng dữ liệu, thời hạn và người phê duyệt rõ ràng.</div><div class="tabs"><button class="active" onclick="show('home',this)">Tổng quan</button><button onclick="show('src',this)">Nguồn kết nối</button><button onclick="show('req',this)">Đề xuất</button></div><div class="view active" id="home"><div class="title"><h2>Phan Thiết</h2><span>THÍ ĐIỂM DEMO</span></div><article class="card"><div class="tag">Y tế cơ sở</div><h3>Nhìn nhu cầu tổng hợp</h3><p>Kết nối trạm y tế và chương trình hỗ trợ phù hợp. Không có hồ sơ cá nhân.</p></article><article class="card"><div class="tag">Sinh kế bền vững</div><h3>Nối cơ hội hợp pháp</h3><p>Hiển thị chương trình công khai về việc làm, đào tạo và hỗ trợ xã hội.</p></article></div><div class="view" id="src"><div class="title"><h2>Nguồn kết nối</h2><span>1 ĐƯỢC DUYỆT</span></div><article class="card"><div class="tag">DỮ LIỆU CÔNG KHAI</div><h3>Dữ liệu y tế tổng hợp</h3><p>Chỉ số theo khu vực; không có thông tin cá nhân.</p><span class="pill" style="background:#dff1e7;color:#176448">Được phép đọc</span></article><button class="new" onclick="dialog.showModal()">＋ Đề nghị kết nối nguồn</button></div><div class="view" id="req"><div class="title"><h2>Đề xuất đang chờ</h2><span>KHÔNG TỰ KÍCH HOẠT</span></div><article class="card"><h3>Chưa có đề xuất</h3><p>Mỗi kết nối phải được tổ chức chủ quản thẩm định trước khi thực hiện.</p></article></div></section><nav class="nav"><button class="active">◉<br>Tổng quan</button><button>⌁<br>Nguồn</button><button>□<br>Đề xuất</button></nav></main><dialog id="dialog"><form onsubmit="event.preventDefault();dialog.close();alert('Đã tạo hồ sơ thẩm định. Metta Eye không tự kết nối nguồn.');"><h2>Đề nghị kết nối</h2><p>Không nhập khóa API, mật khẩu hay dữ liệu công dân.</p><label>Tên nguồn<input required placeholder="Ví dụ: Cổng dữ liệu mở của tỉnh"></label><label>Loại nguồn<select><option>Dữ liệu công khai</option><option>Dữ liệu tổ chức cấp quyền</option><option>Dịch vụ đối tác</option></select></label><label>Mục đích cụ thể<textarea required placeholder="Ví dụ: xem số liệu tổng hợp theo phường"></textarea></label><label>Căn cứ quyền dùng dữ liệu<input required placeholder="Văn bản / thỏa thuận / người phê duyệt"></label><div class="actions"><button class="go">Gửi để thẩm định</button><button type="button" class="no" onclick="dialog.close()">Hủy</button></div></form></dialog><script>function show(id,b){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active')}if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js');</script></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#102d37">
+<meta name="description" content="METTA EYE — bộ não trung tâm của Đế Chế Doanh Nghiệp 1 Người: 7 bước nghĩ, 12 cơ quan kinh doanh, 19 luồng AAS tự động.">
+<link rel="manifest" href="manifest.webmanifest">
+<title>METTA EYE</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;600;700;800&display=swap');
+:root{--n:#102d37;--s:#145866;--i:#f5f1e7;--p:#fffdf8;--ink:#14292c;--m:#58706c;--c:#d86652;--l:#cad8d0;--g:#2f8a5f;--y:#c9962b;--bg:#e5e8df}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--i:#0f2027;--p:#152b33;--ink:#e8efe9;--m:#9fb5b0;--l:#2a4650;--bg:#0a171c}}
+:root[data-theme="dark"]{--i:#0f2027;--p:#152b33;--ink:#e8efe9;--m:#9fb5b0;--l:#2a4650;--bg:#0a171c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.app{max-width:560px;min-height:100dvh;margin:auto;background:var(--i);padding-bottom:92px}
+.mono,.brand,.tag,.kick{font-family:"DM Mono",ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase}
+.hero{padding:calc(env(safe-area-inset-top) + 24px) 20px 22px;background:radial-gradient(circle at 92% 8%,#2c7881 0,transparent 38%),radial-gradient(circle at 0 100%,#1c4a54 0,transparent 45%),var(--n);color:#fff}
+.brand{font-size:10px;color:#b7d3cb;display:flex;justify-content:space-between;gap:8px}
+.hero h1{margin:12px 0 4px;font:700 40px/.95 Fraunces,serif;letter-spacing:-.04em}
+.hero h1 em{font-style:normal;color:#f5c466}
+.hero p{margin:10px 0 0;color:#c6d9d4;font-size:13px;max-width:30em}
+.pulse{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:18px}
+.pulse div{background:#ffffff12;border:1px solid #ffffff1f;border-radius:10px;padding:9px 8px}
+.pulse b{display:block;font:700 22px/1 Fraunces,serif}
+.pulse span{font:9px "DM Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:#b7d3cb}
+.ask{margin-top:16px;display:flex;gap:6px}
+.ask input{flex:1;min-width:0;border:0;border-radius:10px;padding:12px 13px;font:600 14px Manrope,system-ui,sans-serif;background:#fffdf8;color:#14292c}
+.ask button{border:0;border-radius:10px;padding:0 14px;background:var(--c);color:#fff;font:800 13px Manrope,system-ui,sans-serif;cursor:pointer}
+.content{padding:18px 16px}
+.view{display:none}.view.active{display:block}
+.title{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:6px 2px 10px}
+.title h2{margin:0;font:700 23px/1.1 Fraunces,serif}
+.title span{font:10px "DM Mono",ui-monospace,monospace;color:var(--m);text-align:right}
+.lead{color:var(--m);font-size:12.5px;margin:-4px 2px 12px}
+.card{background:var(--p);border:1px solid var(--l);border-radius:12px;padding:13px 14px;margin:8px 0}
+.card h3{margin:2px 0 3px;font-size:15px;line-height:1.3}
+.card p{margin:0;color:var(--m);font-size:12.5px}
+.tag{font-size:9.5px;color:#367068}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag{color:#7fc0b4}}
+.row{display:flex;gap:10px;align-items:flex-start}
+.num{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--n);color:#f5c466;font:700 14px Fraunces,serif}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:99px;font:10.5px "DM Mono",ui-monospace,monospace;background:#e6efe9;color:#2c5a52;border:1px solid transparent;text-decoration:none;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chip.skill{background:#fff0ce;color:#765300}
+.chip.flow{background:#e3ecf5;color:#24496b}
+.chip.page{background:#fde6e1;color:#8f3a2b}
+.chip.wiki{background:#ece8f6;color:#4a3d79}
+.chip.gap{background:transparent;border:1px dashed var(--l);color:var(--m)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip{filter:brightness(.85) saturate(.9)}}
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block;background:#b9c4bf}
+.dot.run{background:var(--g)}.dot.test{background:var(--y)}.dot.build{background:#5b8bb8}.dot.quiet{background:var(--c)}
+.organ summary{list-style:none;cursor:pointer;display:flex;gap:10px;align-items:center}
+.organ summary::-webkit-details-marker{display:none}
+.organ .ic{flex:none;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font:700 13px Fraunces,serif;background:var(--n);color:#f5c466}
+.organ .meta{flex:1;min-width:0}
+.organ .meta small{display:block;color:var(--m);font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{height:5px;border-radius:9px;background:#dfe6e1;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--s),#4aa38f)}
+.organ[open] summary .chev{transform:rotate(90deg)}
+.chev{transition:.2s;color:var(--m)}
+.items{margin:10px 0 2px;padding:0;list-style:none}.items li{display:flex;gap:9px;padding:8px 0;border-top:1px solid var(--l)}.items li b{font-size:13px}.items li>div{flex:1;min-width:0}.items .chip{white-space:normal;text-align:left}.items .ico{flex:none;width:18px;text-align:center;font-weight:800;font-size:15px;color:var(--m)}.items li.ok .ico{color:var(--g)}.items li.half .ico{color:var(--y)}.items .chips{margin-top:4px}
+.check{margin:10px 0 2px;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;font-size:12px;color:var(--m)}
+.check li:before{content:"□ ";color:var(--l)}
+.sub{font:9.5px "DM Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--m);margin:11px 0 0}
+.filters{display:flex;gap:6px;overflow-x:auto;margin:0 -16px 10px;padding:0 16px 4px;scrollbar-width:none}
+.filters button{flex:none;border:1px solid var(--l);background:transparent;color:var(--m);border-radius:99px;padding:6px 11px;font:700 11.5px Manrope,system-ui,sans-serif;cursor:pointer}
+.filters .on{background:var(--s);border-color:var(--s);color:#fff}
+.search{width:100%;border:1px solid var(--l);background:var(--p);color:var(--ink);border-radius:10px;padding:11px 12px;font:14px Manrope,system-ui,sans-serif;margin-bottom:8px}
+.item{display:flex;gap:10px;align-items:baseline;padding:9px 2px;border-bottom:1px solid var(--l)}
+.item:last-child{border:0}
+.item .k{flex:none;width:64px;font:9.5px "DM Mono",ui-monospace,monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--m)}
+.item b{font-size:13.5px;font-weight:700}
+.item p{margin:2px 0 0;color:var(--m);font-size:12px}
+.item a{text-decoration:none}
+.go{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--n);color:#fff;border-radius:12px;padding:14px;text-decoration:none;margin:8px 0}
+.go b{font:700 17px Fraunces,serif}
+.go small{display:block;color:#b7d3cb;font-size:11.5px}
+.go span{font-size:20px;color:#f5c466}
+.empty{color:var(--m);font-size:12.5px;padding:8px 2px}
+.res{margin-top:10px;background:#ffffff10;border-radius:10px;padding:2px 10px 8px;display:none}
+.res.on{display:block}
+.res .item{border-color:#ffffff1f}
+.res .item .k,.res .item p{color:#b7d3cb}
+.res .pr{white-space:pre-wrap;font:11px/1.5 "DM Mono",ui-monospace,monospace;color:#e8efe9;background:#00000030;border-radius:8px;padding:9px 10px;margin:10px 0 0}
+.res .copy{margin-top:8px;width:100%;border:1px solid #ffffff40;background:transparent;color:#fff;border-radius:9px;padding:9px;font:700 12px Manrope,system-ui,sans-serif;cursor:pointer}
+table{width:100%;border-collapse:collapse;font-size:12px}
+td{padding:7px 4px;border-bottom:1px solid var(--l);vertical-align:top}
+td.t{font:10px "DM Mono",ui-monospace,monospace;color:var(--m);white-space:nowrap}
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(560px,100%);padding:9px 8px calc(9px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--p) 94%,transparent);backdrop-filter:blur(8px);display:flex;justify-content:space-around;border-top:1px solid var(--l);z-index:5}
+.nav button{border:0;background:none;color:var(--m);font:700 10.5px Manrope,system-ui,sans-serif;cursor:pointer;padding:4px 8px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.nav button i{font-style:normal;font-size:17px;line-height:1}
+.nav .active{color:var(--s)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .nav .active{color:#7fc0b4}}
+.foot{color:var(--m);font:10px "DM Mono",ui-monospace,monospace;text-align:center;padding:14px 0 4px;letter-spacing:.05em}
+@media(min-width:620px){body{padding:20px}.app{min-height:calc(100dvh - 40px);border-radius:20px;overflow:hidden}.nav{bottom:20px;border-radius:0 0 20px 20px}}
+</style>
+</head>
+<body>
+<main class="app">
+  <header class="hero">
+    <div class="brand"><span>METTA EYE · Bộ não trung tâm</span><span id="scan">—</span></div>
+    <h1>Một người.<br><em>Một bộ não.</em><br>Cả doanh nghiệp.</h1>
+    <p>Hiểu → Nhớ → Nghĩ → Chọn → Làm → Kiểm → Học. Mọi skill, tri thức, trang bán hàng và 19 luồng AAS của Đế Chế 1 Người nối về một chỗ.</p>
+    <div class="pulse">
+      <div><b id="pWiki">–</b><span>Tri thức</span></div>
+      <div><b id="pSkill">–</b><span>Skill</span></div>
+      <div><b id="pLive">–</b><span>Trang live</span></div>
+      <div><b id="pFlow">–</b><span>Luồng chạy</span></div>
+    </div>
+    <form class="ask" onsubmit="event.preventDefault();think()">
+      <input id="q" placeholder="Tôi muốn… (vd: viết sale page, video 30 ngày)" autocomplete="off">
+      <button>Hiểu</button>
+    </form>
+    <div class="res" id="res"></div>
+  </header>
+
+  <section class="content">
+    <!-- ① BỘ NÃO -->
+    <div class="view active" id="v-brain">
+      <div class="title"><h2>7 bước bộ não</h2><span>METTA EYE V2</span></div>
+      <p class="lead">Mỗi bước gắn với tài sản đang có thật trong hệ thống của anh.</p>
+      <div id="steps"></div>
+      <a class="go" href="aas/"><div><b>AAS · 19 luồng tự động</b><small>Bảng điều khiển từng cỗ máy, đọc nhật ký AAS Hub</small></div><span>→</span></a>
+    </div>
+
+    <!-- ② 12 CƠ QUAN -->
+    <div class="view" id="v-organ">
+      <div class="title"><h2>12 cơ quan kinh doanh</h2><span id="organSum"></span></div>
+      <p class="lead"><b style="color:var(--g)">✓</b> có máy (skill, luồng đã chạy, trang có tên miền) · <b style="color:var(--y)">◐</b> mới có tri thức hoặc luồng đang xây · □ trống thật, cần xây.</p>
+      <div id="organs"></div>
+    </div>
+
+    <!-- ③ KHO -->
+    <div class="view" id="v-vault">
+      <div class="title"><h2>Kho não thứ 2</h2><span id="vaultSum"></span></div>
+      <input class="search" id="vq" placeholder="Tìm trong kho…" oninput="renderVault()">
+      <div class="filters" id="vf"></div>
+      <div class="card" style="padding:4px 12px" id="vault"></div>
+    </div>
+
+    <!-- ④ NHỊP -->
+    <div class="view" id="v-log">
+      <div class="title"><h2>Nhịp hệ thống</h2><span id="logState">ĐANG ĐỌC…</span></div>
+      <p class="lead">Mỗi luồng Make / n8n chạy xong ghi 1 dòng vào AAS Hub. Đây là 12 dòng mới nhất.</p>
+      <div class="card" style="padding:4px 10px"><table><tbody id="log"><tr><td class="empty">Đang đọc AAS Hub…</td></tr></tbody></table></div>
+      <a class="go" href="aas/"><div><b>Xem đủ 19 luồng</b><small>Trạng thái, sản lượng 7 ngày, điểm im lặng</small></div><span>→</span></a>
+    </div>
+    <div class="foot" id="foot"></div>
+  </section>
+
+  <nav class="nav">
+    <button class="active" data-v="brain"><i>◉</i>Bộ não</button>
+    <button data-v="organ"><i>▦</i>Cơ quan</button>
+    <button data-v="vault"><i>❏</i>Kho</button>
+    <button data-v="log"><i>∿</i>Nhịp</button>
+  </nav>
+</main>
+
+<script src="brain.js"></script>
+<script>
+const B = window.BRAIN || {wiki:[],skills:[],pages:[],scannedAt:""};
+const LOG_URL = window.AAS_LOG_URL || "https://automate.mettaeye.online/webhook/aas-log";
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+/* 19 luồng AAS — khớp aas/aas.html */
+const FLOWS = {
+ L01:"Chân dung khách hàng",L02:"Từ khóa ăn theo kênh lớn",L03:"YouTube",L04:"Fanpage 8 bài/ngày",L05:"TikTok",
+ L06:"Instagram",L07:"Threads",L08:"MXH khác",L09:"Blog SEO",L10:"Quà tặng (Lead Magnet)",L11:"Trang nhận quà",
+ L12:"Chuỗi email 10 bài",L13:"SEO sản phẩm",L14:"Quảng cáo + bám đuổi",L15:"Sale page",L16:"Bán kèm",
+ L17:"Chatbot Zalo + Messenger",L18:"Gian hàng sàn",L19:"Phễu + báo cáo điểm nghẽn"};
+const BASE = {L04:"test",L10:"build",L11:"run",L12:"build",L15:"run"};
+const FLOW_KW = {L01:"chân dung khách hàng nỗi đau mong muốn insight disc",L02:"từ khóa vidiq kênh lớn xu hướng",L03:"youtube video dài kịch bản",
+ L04:"fanpage facebook bài đăng mỗi ngày ảnh",L05:"tiktok short video ngắn",L06:"instagram reels carousel",L07:"threads quan điểm",
+ L08:"zalo oa linkedin mạng xã hội",L09:"blog seo bài viết website",L10:"quà tặng miễn phí lead magnet tài liệu",L11:"trang nhận quà form đăng ký thu lead",
+ L12:"email chuỗi chăm sóc nuôi dưỡng",L13:"seo sản phẩm google tiêu đề mô tả",L14:"quảng cáo ads bám đuổi retargeting pixel",
+ L15:"sale page trang bán hàng đơn hàng",L16:"bán kèm upsell gói bậc thang định kỳ",L17:"chatbot trả lời tin nhắn inbox zalo messenger khách hỏi",
+ L18:"shopee tiktok shop sàn thương mại điện tử",L19:"báo cáo điểm nghẽn phễu tối ưu mỗi sáng"};
+let lastLog = {};
+
+/* 12 cơ quan — từ tài liệu "12 CƠ QUAN KINH DOANH CỦA METTA EYE" trên Drive.
+   Mỗi mục checklist ghi rõ tài sản nào đang lo phần đó:
+   s:skill · f:mã luồng (tính khi đã chạy thử / có log) · w:từ khóa trong wiki · p:slug trang (tính khi có tên miền).
+   Mục không có tài sản nào = ô trống thật, cần xây. */
+const ORGANS = [
+ {n:"Strategy",vi:"Chiến lược",kw:"chiến lược thị trường chân dung khách hàng mục tiêu định vị",items:[
+  ["Market","w:boi canh mua hang"],["Customer","w:phan khuc w:customer profile f:L01"],["Problem","w:dau don w:viec can lam"],
+  ["Positioning","w:thong diep marketing w:trainer bds"],["Business model","w:mo hinh kinh doanh"],
+  ["Goal","s:4dx-wig-khach-tiem-nang"],["KPI","s:4dx-wig-khach-tiem-nang"]]},
+ {n:"Offer",vi:"Sản phẩm & ưu đãi",kw:"sản phẩm giá ưu đãi gói combo quà tặng",items:[
+  ["Product","p:vip1 p:aff f:L16"],["Value proposition","w:giai phap gia tri"],["Pricing",""],
+  ["Bonus","s:asm-salepage"],["Guarantee",""],["Scarcity","s:asm-salepage"],["USP","w:loi ich khach hang"]]},
+ {n:"Content",vi:"Nội dung",kw:"nội dung bài đăng video ảnh tiêu đề kịch bản fanpage tiktok youtube",items:[
+  ["Research","f:L02 f:L01"],["Hook","s:videomarketing30ngay s:ke-chuyen-7-buoc"],["Script","w:kich ban s:content-bds-8-cong-thuc"],
+  ["Post","f:L04 s:content-bds-8-cong-thuc"],["Video","s:edit-video-vlog s:long-to-shorts-vang s:shorts-karaoke s:video-dep-spa"],
+  ["Image","s:anh-dep-365 s:anh-dep-spa"],["Calendar","w:content calendar f:L04"],["Distribution","w:phan phoi"]]},
+ {n:"Marketing",vi:"Thu hút",kw:"thu hút quảng cáo seo traffic khách mới tờ rơi",items:[
+  ["Organic","f:L04 w:reach"],["Paid traffic","f:L14"],["SEO","w:eeat f:L09 f:L13"],["Social","f:L04 f:L05 f:L06 f:L07"],
+  ["Campaign","w:campaign s:to-roi-bds-22-nguyen-tac"],["Lead magnet","f:L10 p:mienphi"]]},
+ {n:"Funnel",vi:"Phễu",kw:"phễu trang bán hàng landing sale page form quà thanh toán",items:[
+  ["Landing Page","s:asm-salepage p:trang16 f:L15"],["Form","f:L11"],["Lead magnet","f:L10 p:mienphi"],["Webinar","p:summit"],
+  ["VSL","s:asm-salepage"],["Checkout","s:auto-bank-payment s:make-sepay-payment"],["Upsell","f:L16"],["Downsell",""]]},
+ {n:"Tracking",vi:"Đo lường",kw:"đo lường pixel analytics utm sự kiện",items:[
+  ["GTM",""],["Meta Pixel",""],["Google Analytics",""],["Events",""],["UTM",""],["Attribution",""]]},
+ {n:"CRM",vi:"Quản lý khách",kw:"quản lý khách lead dữ liệu chấm điểm",items:[
+  ["Customer profile","w:phan khuc f:L01"],["Source",""],["Need","w:viec can lam"],["Lead score","w:cham diem lead"],
+  ["Stage",""],["History",""],["Next action","f:L12"]]},
+ {n:"Sale",vi:"Bán hàng",kw:"bán hàng chốt sale tư vấn telesales từ chối",items:[
+  ["5 con số: Lead × Chốt × Mua lại × AOV × Biên",""],["DISC","f:L17"],["Sale Script","s:6-buoc-ban-hang-bds w:telesales"],
+  ["Objection","s:asm-salepage s:6-buoc-ban-hang-bds"],["Follow-up","f:L12"],["Closing","s:6-buoc-ban-hang-bds w:quy trinh sale"],
+  ["Upsell","f:L16"],["Customer intelligence","w:dong luc that w:cham diem lead"]]},
+ {n:"CSKH",vi:"Chăm sóc khách",kw:"chăm sóc khách hàng trả lời tin nhắn chatbot inbox",items:[
+  ["Onboarding",""],["FAQ","f:L17"],["Response","f:L17"],["Support",""],["Complaint",""],["NPS",""],["Feedback",""],["Referral",""]]},
+ {n:"Community",vi:"Cộng đồng",kw:"cộng đồng nhóm zalo sự kiện thành viên",items:[
+  ["Member onboarding",""],["Engagement",""],["Recognition",""],["Event","p:summit p:taitro"],["Challenge",""],["Ambassador",""],["Referral",""]]},
+ {n:"Analytics",vi:"Phân tích",kw:"doanh thu báo cáo số liệu chi phí tỷ lệ",items:[
+  ["Revenue",""],["CAC",""],["CPL",""],["CTR",""],["CVR",""],["ROAS",""],["LTV",""],["Retention",""],["Churn",""],["Margin",""]]},
+ {n:"Optimizer",vi:"Tối ưu điểm nghẽn",kw:"điểm nghẽn tối ưu báo cáo mỗi sáng",items:[
+  ["Tìm chặng rò lớn nhất","f:L19"],["Chỉ sửa 1 điểm mỗi lần","f:L19"],["Báo anh mỗi sáng","f:L19"]]}
+];
+
+/* 7 bước — từ "METTA EYE FUTURE" (V2) */
+const STEPS = [
+ {k:"Hiểu",en:"Intent",p:"Ô “Tôi muốn…” ở trên: đọc câu của anh, chỉ ra cơ quan, skill và luồng cần dùng.",chips:()=>[["Gõ thử ở ô trên","gap"]]},
+ {k:"Nhớ",en:"Context",p:"Não thứ 2 (Obsidian + Claude Code + Git): raw → wiki. Hồ sơ khách, giải pháp giá trị, mô hình kinh doanh, 4DX.",
+  chips:()=>{const c={};B.wiki.forEach(w=>c[w.kind]=(c[w.kind]||0)+1);return Object.entries(c).map(([k,v])=>[v+" "+({concepts:"khái niệm",sources:"nguồn",analyses:"phân tích",entities:"thực thể"}[k]||k),"wiki"])}},
+ {k:"Nghĩ",en:"Planner",p:"Skill là cách nghĩ đã đóng gói: 16 bước sale page, 7 bước kể chuyện, 8 yếu tố tâm lý bán hàng.",
+  chips:()=>B.skills.slice(0,6).map(s=>[s.name,"skill"]).concat(B.skills.length>6?[["+"+(B.skills.length-6)+" skill","skill"]]:[])},
+ {k:"Chọn",en:"Router",p:"Claude nghĩ và viết · Gemini dựng ảnh tư thế · Codex đẩy code lên VPS · Make / n8n chạy việc lặp lại.",
+  chips:()=>[["Claude","flow"],["Gemini","flow"],["Codex","flow"],["Make","flow"],["n8n · VPS iNet","flow"]]},
+ {k:"Làm",en:"Executor",p:"19 luồng AAS chia 6 tầng: Nền móng → Thu hút → Chuyển đổi → Khuếch đại → Chốt → Hệ thống hóa.",
+  chips:()=>Object.keys(FLOWS).filter(id=>st(id)!=="none").map(id=>[id+" "+FLOWS[id],"flow",id])},
+ {k:"Kiểm",en:"Judge",p:"Tab Log của Google Sheet “METTA EYE · AAS Hub”: thời gian · mã luồng · trạng thái · số lượng · link.",
+  chips:()=>[["Nhịp hệ thống →","gap","#log"]]},
+ {k:"Học",en:"Learning loop",p:"L19 gom log 18 luồng, tìm chặng rò lớn nhất, báo mỗi sáng. Kết quả thật → data → học lại.",
+  chips:()=>[["L19 "+(st("L19")==="none"?"chưa dựng":"đang chạy"),st("L19")==="none"?"gap":"flow","L19"]]}
+];
+
+function st(id){const b=BASE[id]||"none",l=lastLog[id];if(!l)return b;return Date.now()-l<48*36e5?"run":"quiet"}
+const stName={run:"có log 48h",test:"chạy thử",build:"đang xây",quiet:"im lặng",none:"chưa làm"};
+function chip([t,c,ref]){
+  if(c==="flow"&&ref)return `<a class="chip flow" href="aas/#${esc(ref)}"><span class="dot ${st(ref)}"></span>${esc(t)}</a>`;
+  if(ref&&ref.startsWith("#"))return `<a class="chip ${c}" href="${ref}" onclick="event.preventDefault();go('log')">${esc(t)}</a>`;
+  return `<span class="chip ${c}">${esc(t)}</span>`}
+const pageUrl = p => p.domain ? "https://"+p.domain : "";
+
+function renderSteps(){
+  document.getElementById("steps").innerHTML = STEPS.map((s,i)=>`
+   <article class="card"><div class="row"><div class="num">${i+1}</div><div style="min-width:0">
+   <div class="tag">${esc(s.en)}</div><h3>${esc(s.k)}</h3><p>${esc(s.p)}</p>
+   <div class="chips">${s.chips().map(chip).join("")}</div></div></div></article>`).join("");
+}
+
+const norm=s=>String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/đ/g,"d").replace(/[-_/]/g," ");
+const wikiHay=w=>norm(w.title+" "+(w.tags||[]).join(" "));
+/* Một tham chiếu → {label, cls, state: ok | half | no, href} */
+function resolve(ref){
+  const [t,v]=[ref.slice(0,1),ref.slice(2)];
+  if(t==="s"){const ok=B.skills.some(x=>x.name===v);return {label:v,cls:"skill",state:ok?"ok":"no"}}
+  if(t==="f"){const x=st(v);return {label:v+" "+FLOWS[v],cls:"flow",id:v,state:["run","test","quiet"].includes(x)?"ok":x==="build"?"half":"no"}}
+  if(t==="w"){const hit=B.wiki.filter(w=>wikiHay(w).includes(v)).sort((x,y)=>(norm(x.title).startsWith(v)?0:1)-(norm(y.title).startsWith(v)?0:1));
+    return {label:hit[0]?hit[0].title+(hit.length>1?" +"+(hit.length-1):""):v,cls:"wiki",state:hit.length?"ok":"no",hits:hit}}
+  if(t==="p"){const pg=B.pages.find(x=>x.slug===v);return {label:pg?pg.title:v,cls:"page",state:pg&&pg.domain?"ok":"no",href:pg&&pg.domain?"https://"+pg.domain:""}}
+  return {label:ref,cls:"gap",state:"no"}}
+function organState(o){
+  return o.items.map(([name,refs])=>{
+    const rs=refs.split(/\s+(?=[swfp]:)/).filter(Boolean).map(resolve);
+    /* ✓ có máy (skill / luồng đã chạy / trang có tên miền) · ◐ mới có tri thức hoặc luồng đang xây · □ trống */
+    const state=rs.some(r=>r.state==="ok"&&r.cls!=="wiki")?"ok":rs.some(r=>r.state==="half"||(r.state==="ok"&&r.cls==="wiki"))?"half":"no";
+    return {name,rs,state}})}
+function refChip(r){
+  if(r.cls==="flow")return `<a class="chip flow" href="aas/#${esc(r.id)}"><span class="dot ${st(r.id)}"></span>${esc(r.label)}</a>`;
+  if(r.href)return `<a class="chip page" href="${esc(r.href)}" target="_blank" rel="noopener">${esc(r.label)} ↗</a>`;
+  return `<span class="chip ${r.cls}">${esc(r.label)}</span>`}
+function renderOrgans(){
+  let tot=0,score=0;
+  document.getElementById("organs").innerHTML = ORGANS.map((o,i)=>{
+    const its=organState(o);
+    const ok=its.filter(x=>x.state==="ok").length,half=its.filter(x=>x.state==="half").length;
+    tot+=its.length;score+=ok+half/2;
+    const pct=Math.round((ok+half/2)/its.length*100);
+    const all=its.flatMap(x=>x.rs);
+    const nF=new Set(all.filter(r=>r.cls==="flow").map(r=>r.id)).size,nS=new Set(all.filter(r=>r.cls==="skill"&&r.state==="ok").map(r=>r.label)).size;
+    const rows=its.map(x=>{
+      const used=x.rs.filter(r=>r.state!=="no"),wait=x.rs.filter(r=>r.state==="no");
+      const icon=x.state==="ok"?"✓":x.state==="half"?"◐":"□";
+      const chips=used.map(refChip).join("")+(wait.length?wait.map(r=>`<span class="chip gap">${esc(r.label)}${r.cls==="flow"?" · chưa chạy":""}</span>`).join(""):"")+(x.rs.length?"":`<span class="chip gap">chưa có gì lo phần này</span>`);
+      return `<li class="${x.state}"><span class="ico">${icon}</span><div><b>${esc(x.name)}</b><div class="chips">${chips}</div></div></li>`}).join("");
+    return `<details class="card organ"><summary><div class="ic">${String(i+1).padStart(2,"0")}</div>
+      <div class="meta"><h3>${esc(o.n)} <span style="font-weight:600;color:var(--m)">· ${esc(o.vi)}</span></h3>
+      <small>${ok} có máy · ${half} đang dở · ${its.length-ok-half} trống · ${nF} luồng · ${nS} skill</small>
+      <div class="bar"><i style="width:${pct}%"></i></div></div><span class="chev">›</span></summary>
+      <ul class="items">${rows}</ul></details>`}).join("");
+  document.getElementById("organSum").textContent = `${Math.round(score/tot*100)}% ĐÃ PHỦ`;
+}
+
+/* Kho */
+let vf="all";
+const VF=[["all","Tất cả"],["page","Trang"],["skill","Skill"],["concepts","Khái niệm"],["analyses","Phân tích"],["sources","Nguồn"],["entities","Thực thể"],["draft","Trang nháp"]];
+function vaultItems(){
+  const live=B.pages.filter(p=>p.domain),draft=B.pages.filter(p=>!p.domain);
+  return [
+   ...live.map(p=>({k:"page",kl:p.status==="live"?"Live":"Có link",t:p.title,d:p.domain,u:pageUrl(p)})),
+   ...B.skills.map(s=>({k:"skill",kl:"Skill",t:s.name,d:s.desc})),
+   ...B.wiki.map(w=>({k:w.kind,kl:{concepts:"Khái niệm",analyses:"Phân tích",sources:"Nguồn",entities:"Thực thể"}[w.kind]||w.kind,t:w.title,d:(w.tags||[]).join(" · ")})),
+   ...draft.map(p=>({k:"draft",kl:p.status==="draft"?"Nháp":"Chưa ghi",t:p.title,d:p.sub}))]}
+function renderVault(){
+  const q=(document.getElementById("vq").value||"").toLowerCase().trim();
+  const all=vaultItems();
+  document.getElementById("vf").innerHTML=VF.map(([k,l])=>{const n=k==="all"?all.length:all.filter(x=>x.k===k).length;return `<button class="${vf===k?"on":""}" onclick="vf='${k}';renderVault()">${l} ${n}</button>`}).join("");
+  const list=all.filter(x=>(vf==="all"||x.k===vf)&&(!q||(x.t+" "+x.d).toLowerCase().includes(q)));
+  document.getElementById("vault").innerHTML=list.length?list.map(x=>`<div class="item"><span class="k">${esc(x.kl)}</span><div style="min-width:0">${x.u?`<a href="${esc(x.u)}" target="_blank" rel="noopener"><b>${esc(x.t)} ↗</b></a>`:`<b>${esc(x.t)}</b>`}${x.d?`<p>${esc(x.d)}</p>`:""}</div></div>`).join(""):`<div class="empty">Không thấy gì khớp “${esc(q)}”.</div>`;
+  document.getElementById("vaultSum").textContent=all.length+" MỤC";
+}
+
+/* ① HIỂU — đọc câu "Tôi muốn…", chỉ ra cơ quan, skill, luồng, tri thức nên dùng */
+const STOP=new Set(["toi","muon","can","cho","lam","cua","va","mot","nhung","the","nao","de","voi","giup","hay","nay","la","co","duoc","minh","em","ve","cac","nhu"]);
+function think(){
+  const raw=document.getElementById("q").value.trim(),box=document.getElementById("res");
+  if(!raw){box.classList.remove("on");return}
+  const words=norm(raw).split(/[^a-z0-9]+/).filter(w=>w.length>1&&!STOP.has(w));
+  const bigrams=words.slice(1).map((w,i)=>words[i]+" "+w);
+  /* Điểm = từ khớp + từ khớp ở đầu mô tả + khớp tên + cụm 2 từ khớp.
+     Câu nhiều từ: phải khớp ≥ nửa số từ hoặc khớp nguyên 1 cụm 2 từ, tránh khớp lẻ tẻ kiểu “tu”, “vi”. */
+  const need=words.length<=2?words.length:Math.ceil(words.length/2);
+  const score=(text,name)=>{
+    const n=" "+norm(text).replace(/[^a-z0-9]+/g," ")+" ",toks=new Set(n.trim().split(" "));
+    const nt=norm(name||"").split(/[^a-z0-9]+/).filter(Boolean);let sc=0,hit=0,bi=false;
+    const head=new Set(n.trim().split(" ").slice(0,8));
+    words.forEach(w=>{const inName=nt.some(t=>t===w||(w.length>=4&&t.startsWith(w)));if(toks.has(w)||inName)hit++;if(toks.has(w))sc+=1;if(head.has(w))sc+=.5;if(inName)sc+=2});
+    bigrams.forEach(g=>{if(n.includes(" "+g+" ")){sc+=1.5;bi=true}});
+    return (hit>=need||bi)?sc:0};
+  const cand=[
+   ...B.skills.map(x=>({c:"Skill",k:"Skill",t:x.name,d:x.desc,s:score(x.name+" "+x.desc,x.name)*1.4})),
+   ...ORGANS.map(o=>{const gaps=organState(o).filter(x=>x.state==="no").map(x=>x.name);
+     return {c:"Cơ quan",k:"Cơ quan",t:o.n+" · "+o.vi,d:gaps.length?"Còn trống: "+gaps.join(", "):"Đã có cỗ máy cho mọi mục",s:score(o.n+" "+o.vi+" "+o.kw+" "+o.items.map(x=>x[0]).join(" "),o.n+" "+o.vi)}}),
+   ...Object.entries(FLOWS).map(([id,n])=>({c:"Luồng",k:id,t:"Máy "+n,d:stName[st(id)],s:score(n+" "+(FLOW_KW[id]||""),n)*1.2})),
+   ...B.wiki.map(w=>({c:"Tri thức",k:"Tri thức",t:w.title,d:(w.tags||[]).join(" · "),s:score(w.title+" "+(w.tags||[]).join(" "))})),
+   ...B.pages.filter(x=>x.domain).map(x=>({c:"Trang",k:"Trang",t:x.title,d:x.domain,s:score(x.title+" "+x.sub+" "+x.slug)}))
+  ].filter(x=>x.s>=1).sort((a,b)=>b.s-a.s);
+  const best=cand.length?cand[0].s:0;for(let i=cand.length-1;i>=0;i--)if(cand[i].s<best*.3)cand.splice(i,1);
+  const cap={"Skill":2,"Cơ quan":1,"Luồng":2,"Tri thức":2,"Trang":1},used={},pick=[];
+  for(const x of cand){if((used[x.c]||0)<cap[x.c]){used[x.c]=(used[x.c]||0)+1;pick.push(x)}if(pick.length>=7)break}
+  if(!pick.length){box.innerHTML=`<div class="item"><span class="k">Chưa hiểu</span><div><b>Chưa có gì trong não khớp câu này.</b><p>Thử từ khóa khác — hoặc đây đúng là chỗ trống nên đóng gói thành skill mới.</p></div></div>`;box.classList.add("on");return}
+  const sk=pick.filter(x=>x.c==="Skill").map(x=>x.t),wk=pick.filter(x=>x.c==="Tri thức").map(x=>x.t),fl=pick.filter(x=>x.c==="Luồng").map(x=>x.k);
+  const prompt=`Tôi muốn: ${raw}\n`+(sk.length?`Dùng skill: ${sk.join(", ")}\n`:"")+(wk.length?`Đọc trong wiki: ${wk.join("; ")}\n`:"")+
+    `Áp dụng 8 yếu tố tâm lý bán hàng.`+(fl.length?` Xong thì ghi 1 dòng vào tab Log của AAS Hub (mã ${fl[0]}).`:"");
+  box.innerHTML=pick.map(x=>`<div class="item"><span class="k">${esc(x.k)}</span><div style="min-width:0"><b>${esc(x.t)}</b>${x.d?`<p>${esc(x.d.length>120?x.d.slice(0,119)+"…":x.d)}</p>`:""}</div></div>`).join("")+
+   `<pre class="pr">${esc(prompt)}</pre><button class="copy" id="cp">Chép lệnh này cho Claude</button>`;
+  box.classList.add("on");
+  document.getElementById("cp").onclick=async e=>{try{await navigator.clipboard.writeText(prompt);e.target.textContent="Đã chép ✓"}catch(_){e.target.textContent="Bôi đen khung trên để chép"}};
+}
+
+/* ④ NHỊP — đọc log AAS Hub */
+function csv(t){return t.trim().split(/\r?\n/).map(l=>{const o=[];let c="",q=false;for(const ch of l){if(ch=='"'){q=!q}else if(ch==","&&!q){o.push(c);c=""}else c+=ch}o.push(c);return o})}
+async function loadLog(){
+  const st$=document.getElementById("logState");
+  try{
+    const r=await fetch(LOG_URL,{cache:"no-store"});if(!r.ok)throw new Error("HTTP "+r.status);
+    const t=await r.text();let v;
+    if(!/^\s*[\[{]/.test(t))v=csv(t);else{const j=JSON.parse(t);v=Array.isArray(j)?j:(j.values||[])}
+    v=v.filter(x=>x&&/^\d{4}-/.test(x[0]||""));
+    v.forEach(x=>{const ts=Date.parse(String(x[0]).replace(" ","T")+"+07:00");if(!isNaN(ts)&&(!lastLog[x[1]]||ts>lastLog[x[1]]))lastLog[x[1]]=ts});
+    const rows=v.slice(-12).reverse();
+    document.getElementById("log").innerHTML=rows.length?rows.map(x=>`<tr><td class="t">${esc(x[0])}<br>${esc(x[1])}</td><td>${x[5]&&/^https?:/.test(x[5])?`<a href="${esc(x[5])}" target="_blank" rel="noopener">${esc(x[6]||x[5])}</a>`:esc(x[6]||"")}<div class="mono" style="font-size:9.5px;color:var(--m);margin-top:2px">${esc(x[2])} · ${esc(x[3])} ${esc(x[4])}</div></td></tr>`).join(""):`<tr><td class="empty">AAS Hub chưa có dòng nào.</td></tr>`;
+    st$.textContent=v.length+" DÒNG LOG";
+  }catch(e){
+    st$.textContent="CHƯA ĐỌC ĐƯỢC";
+    document.getElementById("log").innerHTML=`<tr><td class="empty">Không đọc được AAS Hub (${esc(e.message)}). Trạng thái luồng đang dùng mức nền.</td></tr>`;
+  }
+  document.getElementById("pFlow").textContent=Object.keys(FLOWS).filter(id=>st(id)==="run").length+"/19";
+  renderSteps();renderOrgans();
+}
+
+/* Điều hướng */
+function go(v){document.querySelectorAll(".view").forEach(x=>x.classList.toggle("active",x.id==="v-"+v));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.v===v));window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>go(b.dataset.v));
+
+document.getElementById("pWiki").textContent=B.wiki.length;
+document.getElementById("pSkill").textContent=B.skills.length;
+document.getElementById("pLive").textContent=B.pages.filter(p=>p.status==="live").length;
+document.getElementById("pFlow").textContent=Object.keys(FLOWS).filter(id=>st(id)==="run").length+"/19";
+document.getElementById("scan").textContent=B.scannedAt?"Quét "+B.scannedAt.slice(5).replace("-","/"):"";
+document.getElementById("foot").textContent="Não quét lần cuối "+(B.scannedAt||"—")+" · chạy lại: python3 scripts/scan-brain.py";
+renderSteps();renderOrgans();renderVault();loadLog();
+</script>
+</body>
+</html>
